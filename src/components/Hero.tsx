@@ -73,7 +73,7 @@ const Hero = () => {
             {/* Headline with Typing Effect */}
             <div className="space-y-4">
               <motion.h1 
-                className="text-[28px] leading-[1.2] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground"
+                className="text-[28px] leading-[1.2] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground min-h-[80px] sm:min-h-[100px] md:min-h-[130px] lg:min-h-[160px] xl:min-h-[200px] flex items-start"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
