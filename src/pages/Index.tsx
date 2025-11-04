@@ -11,6 +11,10 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
+import Location from "@/components/Location";
+import GoogleReviews from "@/components/GoogleReviews";
+import InstagramSection from "@/components/InstagramSection";
+import Gallery from "@/components/Gallery";
 
 /**
  * NOVA ARQUITETURA DE CONVERSÃO - LANDING PAGE HELANA CARE HUB
@@ -61,6 +65,18 @@ const Index = () => {
       
       {/* 8. FAQ - Accordion */}
       <FAQ />
+      
+      {/* 8.5 Google Reviews - Depoimentos Reais */}
+      <GoogleReviews />
+      
+      {/* 8.6 Gallery - Ambiente do Consultório */}
+      <Gallery />
+      
+      {/* 8.7 Instagram - Conteúdo Social */}
+      <InstagramSection />
+      
+      {/* 8.8 Location - Localização e Contato */}
+      <Location />
       
       {/* 9. Final CTA - Urgência/Escassez MÁXIMA */}
       <FinalCTA />

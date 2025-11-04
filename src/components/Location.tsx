@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const Location = () => {
-  const googleMapsLink = "https://maps.app.goo.gl/ivqyGNHWVvkS3q7L7";
+  const googleMapsLink = "https://maps.app.goo.gl/n2yzvkETuzYGRVQSA";
   const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Helana%20Cardoso";
   
   return (
@@ -48,7 +48,7 @@ const Location = () => {
             viewport={{ once: true }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.8!2d-48.02!3d-15.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a33b3618f8f59%3A0xb87f2e3c4d1a5f6e!2sAv.%20Pau%20Brasil%2C%2010%20-%20%C3%81guas%20Claras%2C%20Bras%C3%ADlia%20-%20DF%2C%2071926-000!5e0!3m2!1spt-BR!2sbr!4v1730000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.046744744744!2d-48.0238!3d-15.8365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b9b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sAv.%20Pau%20Brasil%2C%2010%20-%20Sala%201912%20-%20%C3%81guas%20Claras%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1730000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
