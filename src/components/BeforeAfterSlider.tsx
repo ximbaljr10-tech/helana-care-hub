@@ -30,7 +30,9 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
     setSliderPosition(clampedPercentage);
   };
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setIsDragging(true);
   };
 
@@ -40,11 +42,19 @@ const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      handleMove(e.clientX);
+      if (isDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+        handleMove(e.clientX);
+      }
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      handleMove(e.touches[0].clientX);
+      if (isDragging) {
+        e.preventDefault();
+        e.stopPropagation();
+        handleMove(e.touches[0].clientX);
+      }
     };
 
     if (isDragging) {

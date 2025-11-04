@@ -62,7 +62,7 @@ const HeroNew = () => {
               <div className="bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-6 py-3 rounded-full shadow-2xl border-2 border-white/20 animate-pulse-slow">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-5 h-5 animate-bounce" />
-                  <span className="font-bold text-lg">🔥 Apenas 3 vagas esta semana!</span>
+                  <span className="font-bold text-lg">Apenas 3 vagas esta semana!</span>
                 </div>
               </div>
             </motion.div>
@@ -110,21 +110,6 @@ const HeroNew = () => {
               >
                 Com Procedimentos Estéticos Íntimos Modernos e Seguros
               </motion.p>
-              
-              <motion.div
-                className="flex items-center gap-2 text-[hsl(30,15%,45%)]"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 0.6 }}
-              >
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[hsl(35,35%,55%)]">
-                  <img src={heroImage} alt="Dra. Helana" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p className="font-bold text-[hsl(30,20%,25%)]">Dra. Helana Cardoso</p>
-                  <p className="text-sm">Ginecologista e Obstetra</p>
-                </div>
-              </motion.div>
             </div>
             
             {/* Benefícios Emocionais */}
@@ -135,9 +120,9 @@ const HeroNew = () => {
               transition={{ delay: 1.1, duration: 0.6 }}
             >
               {[
-                "✨ Mais confiança na intimidade",
-                "💖 Aumento do prazer e qualidade de vida",
-                "🌟 Resultados naturais e duradouros"
+                { icon: Sparkles, text: "Mais confiança na intimidade" },
+                { icon: Star, text: "Aumento do prazer e qualidade de vida" },
+                { icon: Sparkles, text: "Resultados naturais e duradouros" }
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
@@ -146,7 +131,8 @@ const HeroNew = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.2 + index * 0.1 }}
                 >
-                  <span className="font-semibold">{benefit}</span>
+                  <benefit.icon className="w-5 h-5 text-[hsl(35,35%,55%)] flex-shrink-0" />
+                  <span className="font-semibold">{benefit.text}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -164,7 +150,7 @@ const HeroNew = () => {
                 onClick={() => window.open(whatsappLink, '_blank')}
               >
                 <span className="relative z-10 flex items-center justify-center gap-3">
-                  📱 Agendar Consulta Agora
+                  Agendar Consulta Agora
                   <ArrowRight className="group-hover:translate-x-2 transition-transform w-6 h-6" />
                 </span>
               </Button>

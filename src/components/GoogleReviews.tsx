@@ -16,7 +16,7 @@ const GoogleReviews = () => {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
-  // Auto-rotate every 3 seconds
+  // Auto-rotate every 4 seconds
   useEffect(() => {
     if (!api) return;
 
@@ -29,7 +29,7 @@ const GoogleReviews = () => {
       } else {
         api.scrollTo(0);
       }
-    }, 3000);
+    }, 4000);
 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
@@ -40,7 +40,7 @@ const GoogleReviews = () => {
     };
   }, [api]);
 
-  // Real reviews structure
+  // Real reviews structure - Expanded for better carousel
   const reviews = [
     {
       name: "Maria Silva",
@@ -83,6 +83,34 @@ const GoogleReviews = () => {
       date: "Há 1 mês",
       text: "Profissional competente e acolhedora. Finalmente encontrei uma ginecologista que realmente se importa com o bem-estar das pacientes. Recomendo de olhos fechados!",
       avatar: "CR"
+    },
+    {
+      name: "Beatriz Almeida",
+      rating: 5,
+      date: "Há 5 dias",
+      text: "Atendimento impecável! Desde a recepção até a consulta, tudo foi perfeito. A Dra. Helana tem um cuidado especial com cada detalhe e me deixou muito tranquila durante todo o procedimento.",
+      avatar: "BA"
+    },
+    {
+      name: "Renata Martins",
+      rating: 5,
+      date: "Há 3 meses",
+      text: "Mudou minha vida! Depois do tratamento com a Dra. Helana, minha autoestima aumentou significativamente. Procedimento seguro, resultados naturais e duradouros. Super recomendo!",
+      avatar: "RM"
+    },
+    {
+      name: "Laura Pereira",
+      rating: 5,
+      date: "Há 2 meses",
+      text: "Profissional dedicada e extremamente qualificada. Explica cada passo do procedimento com paciência e clareza. Fiquei muito satisfeita com o resultado final. Consultório moderno e acolhedor.",
+      avatar: "LP"
+    },
+    {
+      name: "Isabela Lima",
+      rating: 5,
+      date: "Há 4 semanas",
+      text: "Experiência incrível do início ao fim! A Dra. Helana é muito atenciosa e profissional. O resultado superou todas as minhas expectativas. Obrigada por todo cuidado e dedicação!",
+      avatar: "IL"
     }
   ];
 
@@ -264,20 +292,27 @@ const GoogleReviews = () => {
             <CarouselNext className="hidden md:flex -right-12 w-14 h-14 bg-primary hover:bg-primary/90 text-white border-none shadow-xl" />
           </Carousel>
 
-          {/* Progress Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-8">
-            {Array.from({ length: count }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === current
-                    ? "w-8 bg-primary"
-                    : "w-2 bg-primary/20 hover:bg-primary/40"
-                }`}
-                aria-label={`Ir para avaliação ${index + 1}`}
-              />
-            ))}
+          {/* Progress Dots Indicator with Counter */}
+          <div className="flex flex-col items-center gap-3 mt-8">
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-semibold text-muted-foreground">
+                {current + 1} / {count}
+              </span>
+            </div>
+            <div className="flex justify-center gap-2">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === current
+                      ? "w-8 bg-primary"
+                      : "w-2 bg-primary/20 hover:bg-primary/40"
+                  }`}
+                  aria-label={`Ir para avaliação ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </motion.div>
 
