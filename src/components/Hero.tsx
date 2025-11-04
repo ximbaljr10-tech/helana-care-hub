@@ -142,32 +142,32 @@ const Hero = () => {
             
             {/* MEGA CTA WHATSAPP - IMPOSSÍVEL IGNORAR */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.6 }}
             >
               <Button 
                 size="lg"
-                className="w-full sm:w-auto group relative bg-gradient-to-r from-accent via-primary to-accent hover:from-primary hover:via-accent hover:to-primary text-white font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 text-base sm:text-lg md:text-xl px-6 py-5 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl border-2 border-accent/30 hover:scale-105 min-h-[56px]"
+                className="w-full sm:w-auto group relative bg-gradient-to-r from-accent via-primary to-accent hover:from-primary hover:via-accent hover:to-primary text-white font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 text-sm sm:text-base md:text-lg lg:text-xl px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 lg:px-12 lg:py-8 rounded-xl sm:rounded-2xl border-2 border-accent/30 hover:scale-105 min-h-[52px] sm:min-h-[56px]"
                 onClick={() => window.open(whatsappLink, '_blank')}
               >
-                <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+                <span className="relative z-10 flex items-center justify-center gap-2">
                   📱 Agendar Consulta
-                  <ArrowRight className="group-hover:translate-x-2 transition-transform w-5 h-5 sm:w-6 sm:h-6" />
+                  <ArrowRight className="group-hover:translate-x-2 transition-transform w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                 </span>
               </Button>
             </motion.div>
             
             {/* Trust Indicators with Animated Counters */}
             <motion.div 
-              className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 sm:pt-8 border-t-2 border-border"
+              className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 pt-4 sm:pt-6 md:pt-8 border-t-2 border-border"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.6 }}
             >
               <div className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-primary">
                   <CountUp
                     end={6555}
                     duration={2.5}
@@ -177,10 +177,10 @@ const Hero = () => {
                     scrollSpyOnce
                   />
                 </p>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold mt-1">Seguidores</p>
+                <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-muted-foreground font-semibold mt-0.5 sm:mt-1">Seguidores</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-accent">
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-accent">
                   <CountUp
                     end={5.0}
                     duration={2.5}
@@ -190,11 +190,11 @@ const Hero = () => {
                     scrollSpyOnce
                   />
                 </p>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold mt-1">Google</p>
+                <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-muted-foreground font-semibold mt-0.5 sm:mt-1">Google</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">8+</p>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold mt-1">Anos</p>
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-primary">8+</p>
+                <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-muted-foreground font-semibold mt-0.5 sm:mt-1">Anos</p>
               </div>
             </motion.div>
           </motion.div>

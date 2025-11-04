@@ -222,20 +222,22 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-10 md:p-14 border-2 border-primary/20">
-            <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 border-2 border-primary/20">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               Tem dúvidas sobre qual procedimento é ideal para você?
             </p>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8">
               Entre em contato e receba uma orientação personalizada
             </p>
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-yellow-400 to-accent hover:from-yellow-500 hover:to-accent text-black font-black shadow-2xl transition-all duration-300 text-xl px-12 py-8 rounded-2xl border-4 border-yellow-300/50 group"
+              className="w-full sm:w-auto bg-gradient-to-r from-accent to-primary hover:from-primary hover:to-accent text-white font-black shadow-2xl transition-all duration-300 text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 rounded-xl sm:rounded-2xl border-4 border-accent/30 group"
               onClick={() => window.open(whatsappLink, '_blank')}
             >
-              💬 Conversar com a Dra. Helana
-              <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
+              <span className="flex items-center justify-center gap-2">
+                💬 Conversar com a Dra. Helana
+                <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
+              </span>
             </Button>
           </div>
         </motion.div>

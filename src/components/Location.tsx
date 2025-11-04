@@ -38,15 +38,14 @@ const Location = () => {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 mb-12">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12">
           {/* Google Maps Embed - GRANDE E DESTAQUE */}
           <motion.div
-            className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-primary/20"
+            className="relative h-[280px] sm:h-[350px] md:h-[450px] lg:h-[500px] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl border-2 border-primary/20"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.02 }}
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.8!2d-48.02!3d-15.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a33b3618f8f59%3A0xb87f2e3c4d1a5f6e!2sAv.%20Pau%20Brasil%2C%2010%20-%20%C3%81guas%20Claras%2C%20Bras%C3%ADlia%20-%20DF%2C%2071926-000!5e0!3m2!1spt-BR!2sbr!4v1730000000000"
@@ -60,13 +59,13 @@ const Location = () => {
             />
             
             {/* Overlay Button */}
-            <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
               <Button
-                size="lg"
-                className="w-full bg-white/95 hover:bg-white text-primary font-bold shadow-xl backdrop-blur-sm text-sm sm:text-base py-4 sm:py-6"
+                size="sm"
+                className="w-full bg-white/95 hover:bg-white text-primary font-bold shadow-xl backdrop-blur-sm text-xs sm:text-sm md:text-base py-3 sm:py-4"
                 onClick={() => window.open(googleMapsLink, '_blank')}
               >
-                <Navigation className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                <Navigation className="mr-1.5 sm:mr-2 w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 Abrir no Google Maps
               </Button>
             </div>
@@ -74,27 +73,27 @@ const Location = () => {
 
           {/* Contact Information Cards */}
           <motion.div 
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
             {/* Address Card */}
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-primary/20 hover-lift">
-              <div className="flex items-start gap-3 sm:gap-4 mb-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-primary flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-2 border-primary/20 hover-lift">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">Endereço</h3>
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-semibold">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 sm:mb-2">Endereço</h3>
+                  <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed font-semibold">
                     Av. Pau Brasil, 10 - Sala 1912
                   </p>
-                  <p className="text-sm sm:text-base text-muted-foreground mt-1">
+                  <p className="text-xs sm:text-sm md:text-base text-muted-foreground mt-0.5 sm:mt-1">
                     Águas Claras, Brasília - DF
                   </p>
-                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                  <p className="text-xs text-muted-foreground mt-0.5 sm:mt-1">
                     CEP: 71926-000
                   </p>
                 </div>
@@ -102,14 +101,14 @@ const Location = () => {
             </div>
 
             {/* Hours Card */}
-            <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-accent/20 hover-lift">
-              <div className="flex items-start gap-3 sm:gap-4 mb-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-accent flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-2 border-accent/20 hover-lift">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">Horário de Atendimento</h3>
-                  <div className="space-y-2 text-base sm:text-lg">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 sm:mb-3">Horário de Atendimento</h3>
+                  <div className="space-y-1.5 sm:space-y-2 text-sm sm:text-base md:text-lg">
                     <p className="text-muted-foreground flex justify-between gap-2">
                       <span className="font-semibold">Seg a Qui:</span>
                       <span>9h - 18h</span>
@@ -129,29 +128,30 @@ const Location = () => {
 
             {/* WhatsApp CTA Card */}
             <motion.div 
-              className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl border-2 border-green-200"
+              className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl lg:rounded-3xl border-2 border-green-200"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-7 h-7 text-white" />
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl md:rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Entre em Contato</h3>
-                  <p className="text-base text-muted-foreground mb-2">
-                    <Phone className="inline w-4 h-4 mr-2" />
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 sm:mb-2">Entre em Contato</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-1 sm:mb-2">
+                    <Phone className="inline w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                     (61) 99104-9924
                   </p>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
                     Agende sua consulta de forma rápida e prática pelo WhatsApp
                   </p>
                   <Button
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold shadow-lg text-lg py-6"
+                    size="default"
+                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold shadow-lg text-sm sm:text-base md:text-lg py-2.5 sm:py-3 md:py-6"
                     onClick={() => window.open(whatsappLink, '_blank')}
                   >
-                    <MessageCircleIcon className="mr-2 w-6 h-6" />
-                    Falar no WhatsApp Agora
+                    <MessageCircleIcon className="mr-1.5 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="hidden sm:inline">Falar no WhatsApp Agora</span>
+                    <span className="sm:hidden">WhatsApp</span>
                   </Button>
                 </div>
               </div>
@@ -161,34 +161,34 @@ const Location = () => {
 
         {/* Bottom Info Cards */}
         <motion.div 
-          className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6"
+          className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="bg-card p-6 rounded-2xl border border-border text-center hover-lift">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-primary">🚗</span>
+          <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl font-bold text-primary">🚗</span>
             </div>
-            <h4 className="font-bold text-foreground text-lg mb-2">Estacionamento</h4>
-            <p className="text-sm text-muted-foreground">Conveniado no local</p>
+            <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Estacionamento</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">Conveniado no local</p>
           </div>
 
-          <div className="bg-card p-6 rounded-2xl border border-border text-center hover-lift">
-            <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-accent">♿</span>
+          <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl font-bold text-accent">♿</span>
             </div>
-            <h4 className="font-bold text-foreground text-lg mb-2">Acessibilidade</h4>
-            <p className="text-sm text-muted-foreground">Ambiente acessível</p>
+            <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Acessibilidade</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">Ambiente acessível</p>
           </div>
 
-          <div className="bg-card p-6 rounded-2xl border border-border text-center hover-lift">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl font-bold text-primary">✨</span>
+          <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl font-bold text-primary">✨</span>
             </div>
-            <h4 className="font-bold text-foreground text-lg mb-2">Ambiente Moderno</h4>
-            <p className="text-sm text-muted-foreground">Confortável e discreto</p>
+            <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Ambiente Moderno</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">Confortável e discreto</p>
           </div>
         </motion.div>
       </div>
