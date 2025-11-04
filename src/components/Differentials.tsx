@@ -1,4 +1,4 @@
-import { Shield, Heart, Award, Sparkles } from "lucide-react";
+import { Shield, Award, Heart, Users, Star, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Differentials = () => {
@@ -21,7 +21,7 @@ const Differentials = () => {
       icon: Award,
       title: "Especialização Única",
       description: "Expertise em estética íntima feminina. Foco exclusivo em procedimentos ginecológicos estéticos modernos.",
-      stats: "5.0 ⭐",
+      stats: "5.0",
       gradient: "from-[hsl(35,35%,55%)] to-[hsl(30,30%,45%)]"
     },
     {
@@ -96,8 +96,9 @@ const Differentials = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <p className="text-lg md:text-xl text-[hsl(30,20%,25%)] font-semibold">
-            💖 "Meu compromisso é com sua saúde, bem-estar e autoestima. Cada procedimento é realizado com dedicação, técnica e muito carinho."
+          <p className="text-lg md:text-xl text-[hsl(30,20%,25%)] font-semibold flex items-start gap-3">
+            <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+            <span>"Meu compromisso é com sua saúde, bem-estar e autoestima. Cada procedimento é realizado com dedicação, técnica e muito carinho."</span>
           </p>
           <p className="text-[hsl(30,15%,45%)] mt-4">— Dra. Helana Cardoso</p>
         </motion.div>

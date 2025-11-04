@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Flame } from "lucide-react";
 
 const TopProcedures = () => {
   const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20";
@@ -91,8 +91,9 @@ const TopProcedures = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,30%,45%)]/80 to-transparent" />
                 {procedure.popular && (
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse-slow">
-                    🔥 Mais Procurado
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse-slow flex items-center gap-2">
+                    <Flame className="w-4 h-4" />
+                    Mais Procurado
                   </div>
                 )}
                 <div className="absolute bottom-4 left-4 right-4">

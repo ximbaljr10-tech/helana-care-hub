@@ -172,7 +172,7 @@ const GoogleReviews = () => {
 
             {/* Badge Pacientes Felizes */}
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 backdrop-blur-sm rounded-xl border border-primary/20">
-              <span className="text-2xl">💖</span>
+              <Star className="w-6 h-6 fill-primary text-primary" />
               <div>
                 <p className="text-2xl font-bold text-primary leading-none">50+</p>
                 <p className="text-xs font-medium text-muted-foreground">Avaliações</p>

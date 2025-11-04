@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Users, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, Users, Sparkles, Phone, Lock } from "lucide-react";
 
 const FinalCTA = () => {
   const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Quero%20agendar%20minha%20consulta%20ainda%20esta%20semana!";
@@ -28,8 +28,8 @@ const FinalCTA = () => {
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <Clock className="w-6 h-6" />
-            <span className="font-bold text-lg">🔥 Apenas 3 vagas disponíveis esta semana!</span>
+            <Clock className="w-5 h-5" />
+            <span className="font-bold text-lg">Apenas 3 vagas disponíveis esta semana!</span>
           </motion.div>
 
           {/* Título */}
@@ -76,7 +76,8 @@ const FinalCTA = () => {
               onClick={() => window.open(whatsappLink, '_blank')}
             >
               <span className="flex items-center gap-3">
-                📱 Quero Agendar Minha Consulta Agora
+                <Phone className="w-6 h-6" />
+                Quero Agendar Minha Consulta Agora
                 <ArrowRight className="w-7 h-7 group-hover:translate-x-2 transition-transform" />
               </span>
             </Button>
@@ -84,20 +85,21 @@ const FinalCTA = () => {
 
           {/* Scarcity Message */}
           <motion.p
-            className="mt-8 text-white/80 text-sm md:text-base"
+            className="mt-8 text-white/80 text-sm md:text-base flex items-center justify-center gap-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            ⚡ Vagas limitadas por semana para garantir atendimento personalizado
+            <Sparkles className="w-4 h-4" />
+            <span>Vagas limitadas por semana para garantir atendimento personalizado</span>
           </motion.p>
 
           {/* Trust Badge */}
           <div className="mt-12 pt-8 border-t border-white/20">
             <p className="text-white/70 text-sm mb-4">Atendimento 100% discreto e sigiloso</p>
             <div className="flex items-center justify-center gap-2 text-white">
-              <span className="text-2xl">🔒</span>
+              <Lock className="w-5 h-5" />
               <span className="font-semibold">Ambiente seguro e acolhedor</span>
             </div>
           </div>

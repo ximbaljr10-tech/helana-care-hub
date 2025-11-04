@@ -16,7 +16,7 @@ const SocialProof = () => {
       icon: Star,
       value: 5.0,
       decimals: 1,
-      suffix: "⭐",
+      suffix: "",
       label: "Avaliação no Google",
       color: "hsl(35,35%,55%)"
     },
@@ -73,16 +73,33 @@ const SocialProof = () => {
                 >
                   <stat.icon className="w-7 h-7" style={{ color: stat.color }} />
                 </div>
-                <p className="text-4xl md:text-5xl font-black text-[hsl(30,20%,25%)] mb-2">
-                  <CountUp
-                    end={stat.value}
-                    duration={2.5}
-                    decimals={stat.decimals || 0}
-                    suffix={stat.suffix}
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />
-                </p>
+              <div className="flex items-center justify-center gap-1 mb-1">
+                {stat.label === "Avaliação no Google" ? (
+                  <>
+                    <p className="text-3xl font-bold text-foreground">
+                      <CountUp
+                        end={stat.value}
+                        duration={2.5}
+                        decimals={stat.decimals || 0}
+                        enableScrollSpy
+                        scrollSpyOnce
+                      />
+                    </p>
+                    <Star className="w-6 h-6 fill-accent text-accent" />
+                  </>
+                ) : (
+                  <p className="text-3xl font-bold text-foreground">
+                    <CountUp
+                      end={stat.value}
+                      duration={2.5}
+                      decimals={stat.decimals || 0}
+                      suffix={stat.suffix}
+                      enableScrollSpy
+                      scrollSpyOnce
+                    />
+                  </p>
+                )}
+              </div>
                 <p className="text-sm md:text-base text-[hsl(30,15%,45%)] font-semibold">
                   {stat.label}
                 </p>

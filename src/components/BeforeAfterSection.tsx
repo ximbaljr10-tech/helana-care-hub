@@ -93,7 +93,7 @@ const BeforeAfterSection = () => {
                       {/* Badge de Resultado */}
                       <div className="mt-6 text-center">
                         <div className="inline-flex items-center gap-2 bg-[hsl(40,40%,96%)] px-4 py-2 rounded-full">
-                          <span className="text-2xl">✨</span>
+                          <Sparkles className="w-5 h-5 text-[hsl(35,35%,55%)]" />
                           <span className="text-sm font-semibold text-[hsl(30,20%,25%)]">
                             Resultado Natural e Duradouro
                           </span>

@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Calendar, MessageCircle, Sparkles } from "lucide-react";
+import { Calendar, MessageCircle, Sparkles, Heart } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
@@ -88,8 +88,9 @@ const HowItWorks = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <p className="text-lg text-[hsl(30,15%,45%)] italic">
-            💖 Tudo em um ambiente acolhedor, discreto e sem julgamentos
+          <p className="text-lg text-[hsl(30,15%,45%)] italic flex items-center justify-center gap-2">
+            <Heart className="w-5 h-5 text-primary" />
+            <span>Tudo em um ambiente acolhedor, discreto e sem julgamentos</span>
           </p>
         </motion.div>
       </div>

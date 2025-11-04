@@ -1,4 +1,4 @@
-import { ArrowRight, Star, MapPin } from "lucide-react";
+import { ArrowRight, Star, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
@@ -155,7 +155,8 @@ const Hero = () => {
                 onClick={() => window.open(whatsappLink, '_blank')}
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
-                  📱 Agendar Consulta
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  Agendar Consulta
                   <ArrowRight className="group-hover:translate-x-2 transition-transform w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                 </span>
               </Button>
@@ -182,15 +183,13 @@ const Hero = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-semibold mt-1">Seguidores</p>
               </div>
               <div className="flex-1 text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-accent">
+                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-accent flex items-center justify-center gap-1">
                   <CountUp
                     end={5.0}
-                    duration={2.5}
                     decimals={1}
-                    suffix="⭐"
-                    enableScrollSpy
-                    scrollSpyOnce
+                    duration={2}
                   />
+                  <Star className="w-5 h-5 fill-[hsl(35,35%,55%)] text-[hsl(35,35%,55%)] ml-1" />
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-semibold mt-1">Google</p>
               </div>

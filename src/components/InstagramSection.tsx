@@ -1,11 +1,11 @@
-import { Instagram, ExternalLink } from "lucide-react";
+import { Instagram, ExternalLink, Lightbulb, MessageSquare, Video, Flower2, UserRound, Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const InstagramSection = () => {
-  const instagramHandle = "@dra.helianacardoso";
-  const instagramUrl = "https://instagram.com/dra.helianacardoso";
+  const instagramHandle = "@dra.helanacardoso";
+  const instagramUrl = "https://instagram.com/dra.helanacardoso";
 
   return (
     <section className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
@@ -94,7 +94,7 @@ const InstagramSection = () => {
               onClick={() => window.open(instagramUrl, "_blank")}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-accent/10 group-hover:bg-accent/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">✨</span>
+                <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Procedimentos</p>
@@ -108,7 +108,7 @@ const InstagramSection = () => {
               onClick={() => window.open(instagramUrl, "_blank")}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">💡</span>
+                <Lightbulb className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Dicas Exclusivas</p>
@@ -122,7 +122,7 @@ const InstagramSection = () => {
               onClick={() => window.open(instagramUrl, "_blank")}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-accent/10 group-hover:bg-accent/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">💬</span>
+                <MessageSquare className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Depoimentos</p>
@@ -149,8 +149,8 @@ const InstagramSection = () => {
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <div className="absolute inset-0 flex items-center justify-center bg-accent/10 group-hover:bg-accent/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">📹</span>
+              <div className="absolute inset-0 flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                <Video className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Lives & Vídeos</p>
@@ -164,7 +164,7 @@ const InstagramSection = () => {
               onClick={() => window.open(instagramUrl, "_blank")}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">🌸</span>
+                <Flower2 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Saúde Íntima</p>
@@ -178,7 +178,7 @@ const InstagramSection = () => {
               onClick={() => window.open(instagramUrl, "_blank")}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-accent/10 group-hover:bg-accent/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">👩‍⚕️</span>
+                <UserRound className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Dra. Heliana</p>
@@ -192,7 +192,7 @@ const InstagramSection = () => {
               onClick={() => window.open(instagramUrl, "_blank")}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                <span className="text-3xl sm:text-4xl md:text-5xl">💖</span>
+                <Heart className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-xs font-semibold truncate">Bem-estar</p>
@@ -215,7 +215,7 @@ const InstagramSection = () => {
             className="w-full sm:w-auto bg-gradient-to-r from-accent via-primary to-accent hover:from-primary hover:via-accent hover:to-primary text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 shadow-2xl font-bold rounded-2xl border-4 border-accent/30 group"
           >
             <Instagram className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 group-hover:rotate-12 transition-transform" />
-            <span className="hidden sm:inline">Seguir @dra.helianacardoso</span>
+            <span className="hidden sm:inline">Seguir @dra.helanacardoso</span>
             <span className="sm:hidden">Seguir no Instagram</span>
             <ExternalLink className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </Button>

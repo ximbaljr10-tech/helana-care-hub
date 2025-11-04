@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, Navigation } from "lucide-react";
+import { MapPin, Clock, Phone, Navigation, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -185,7 +185,7 @@ const Location = () => {
 
           <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
             <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
-              <span className="text-2xl sm:text-3xl font-bold text-primary">✨</span>
+              <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" />
             </div>
             <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Ambiente Moderno</h4>
             <p className="text-xs sm:text-sm text-muted-foreground">Confortável e discreto</p>
