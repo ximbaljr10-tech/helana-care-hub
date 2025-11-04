@@ -140,11 +140,11 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="max-w-7xl mx-auto space-y-8 mb-16">
+        <div className="max-w-7xl mx-auto space-y-4 md:space-y-6 lg:space-y-8 mb-12 md:mb-16">
           {serviceCategories.map((category, idx) => (
             <motion.div 
               key={idx}
-              className={`bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-3xl p-8 md:p-12 border-2 border-border shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden group`}
+              className={`bg-gradient-to-br ${category.gradient} backdrop-blur-sm rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-10 lg:p-12 border-2 border-border shadow-lg hover:shadow-2xl transition-all duration-500 relative overflow-hidden group`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.15 }}
@@ -222,7 +222,7 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-10 md:p-14 border-2 border-primary/20">
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-14 border-2 border-primary/20">
             <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Tem dúvidas sobre qual procedimento é ideal para você?
             </p>
@@ -231,10 +231,10 @@ const Services = () => {
             </p>
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-yellow-400 to-accent hover:from-yellow-500 hover:to-accent text-black font-black shadow-2xl transition-all duration-300 text-xl px-12 py-8 rounded-2xl border-4 border-yellow-300/50 group"
+              className="bg-accent hover:bg-accent/90 text-white font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl border-2 border-accent/30 group hover:scale-105"
               onClick={() => window.open(whatsappLink, '_blank')}
             >
-              💬 Conversar com a Dra. Helana
+              Conversar com a Dra. Heliana
               <span className="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
             </Button>
           </div>

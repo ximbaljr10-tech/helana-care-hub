@@ -39,18 +39,18 @@ const Differentials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Por Que Escolher a <span className="gradient-text">Dra. Helana</span>
+            Por Que Escolher a <span className="gradient-text">Dra. Heliana</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Diferenciais que fazem toda a diferença no seu cuidado
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {differentials.map((item, index) => (
             <div
               key={index}
-              className="group relative p-8 bg-card rounded-2xl border border-border shadow-soft hover-lift animate-fade-in-up"
+              className="group relative p-5 sm:p-6 md:p-8 bg-card rounded-2xl border border-border shadow-soft hover-lift animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}

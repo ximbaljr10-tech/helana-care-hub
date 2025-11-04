@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import heroImage from "@/assets/dra-helana-hero.png";
 
 const Hero = () => {
-  const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Helana%20Cardoso";
+  const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Heliana%20Cardoso";
   const googleMapsLink = "https://maps.app.goo.gl/ivqyGNHWVvkS3q7L7";
   
   return (
@@ -99,7 +99,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
               >
-                Dra. Helana Cardoso
+                Dra. Heliana Cardoso
               </motion.p>
               
               <motion.p 
@@ -149,25 +149,25 @@ const Hero = () => {
             >
               <Button 
                 size="lg"
-                className="w-full sm:w-auto group relative bg-gradient-to-r from-accent via-primary to-accent hover:from-primary hover:via-accent hover:to-primary text-white font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 text-base sm:text-lg md:text-xl px-6 py-5 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl border-2 border-accent/30 hover:scale-105 min-h-[56px]"
+                className="w-full sm:w-auto group relative bg-gradient-to-r from-accent via-accent/90 to-accent hover:from-accent/90 hover:via-accent hover:to-accent/90 text-white font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 text-base sm:text-lg md:text-xl px-6 py-5 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-2xl border-2 border-accent/30 hover:scale-105 min-h-[56px]"
                 onClick={() => window.open(whatsappLink, '_blank')}
               >
                 <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
-                  📱 Agendar Consulta
+                  Agendar Consulta
                   <ArrowRight className="group-hover:translate-x-2 transition-transform w-5 h-5 sm:w-6 sm:h-6" />
                 </span>
               </Button>
             </motion.div>
             
-            {/* Trust Indicators with Animated Counters */}
+            {/* Trust Indicators with Animated Counters - Layout Horizontal Otimizado */}
             <motion.div 
-              className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 sm:pt-8 border-t-2 border-border"
+              className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6 border-t border-border"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.6 }}
             >
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">
+              <div className="inline-flex items-baseline gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/5 rounded-full">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-primary">
                   <CountUp
                     end={6555}
                     duration={2.5}
@@ -177,10 +177,13 @@ const Hero = () => {
                     scrollSpyOnce
                   />
                 </p>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold mt-1">Seguidores</p>
+                <p className="text-xs sm:text-sm text-muted-foreground font-medium">Seguidores</p>
               </div>
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-accent">
+              
+              <span className="text-muted-foreground hidden sm:inline">|</span>
+              
+              <div className="inline-flex items-baseline gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-accent/5 rounded-full">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-accent">
                   <CountUp
                     end={5.0}
                     duration={2.5}
@@ -190,11 +193,14 @@ const Hero = () => {
                     scrollSpyOnce
                   />
                 </p>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold mt-1">Google</p>
+                <p className="text-xs sm:text-sm text-muted-foreground font-medium">Google</p>
               </div>
-              <div className="text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-primary">8+</p>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-semibold mt-1">Anos</p>
+              
+              <span className="text-muted-foreground hidden sm:inline">|</span>
+              
+              <div className="inline-flex items-baseline gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/5 rounded-full">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-primary">8+</p>
+                <p className="text-xs sm:text-sm text-muted-foreground font-medium">Anos</p>
               </div>
             </motion.div>
           </motion.div>
@@ -213,7 +219,7 @@ const Hero = () => {
             >
               <img 
                 src={heroImage} 
-                alt="Dra. Helana Cardoso - Ginecologista especializada em estética íntima"
+                alt="Dra. Heliana Cardoso - Ginecologista especializada em estética íntima"
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />

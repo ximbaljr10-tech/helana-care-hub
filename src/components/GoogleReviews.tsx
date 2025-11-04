@@ -16,7 +16,7 @@ const GoogleReviews = () => {
       name: "Maria Silva",
       rating: 5,
       date: "Há 2 meses",
-      text: "Profissional excepcional! A Dra. Helana me atendeu com muito carinho e profissionalismo. Fiz o clareamento íntimo e estou muito satisfeita com os resultados. Ambiente acolhedor e discreto.",
+      text: "Profissional excepcional! A Dra. Heliana me atendeu com muito carinho e profissionalismo. Fiz o clareamento íntimo e estou muito satisfeita com os resultados. Ambiente acolhedor e discreto.",
       avatar: "MS"
     },
     {
@@ -30,7 +30,7 @@ const GoogleReviews = () => {
       name: "Juliana Costa",
       rating: 5,
       date: "Há 3 semanas",
-      text: "Dra. Helana é incrível! Me senti super à vontade durante toda a consulta. Ela é muito humana e profissional ao mesmo tempo. Fiz o preenchimento íntimo e o resultado foi além das minhas expectativas.",
+      text: "Dra. Heliana é incrível! Me senti super à vontade durante toda a consulta. Ela é muito humana e profissional ao mesmo tempo. Fiz o preenchimento íntimo e o resultado foi além das minhas expectativas.",
       avatar: "JC"
     },
     {
@@ -44,7 +44,7 @@ const GoogleReviews = () => {
       name: "Fernanda Santos",
       rating: 5,
       date: "Há 2 semanas",
-      text: "Ambiente maravilhoso, equipe super atenciosa e a Dra. Helana é sensacional! Fiz a ninfoplastia e só tenho a agradecer pelo resultado natural e pelo pós-operatório tranquilo.",
+      text: "Ambiente maravilhoso, equipe super atenciosa e a Dra. Heliana é sensacional! Fiz a ninfoplastia e só tenho a agradecer pelo resultado natural e pelo pós-operatório tranquilo.",
       avatar: "FS"
     },
     {

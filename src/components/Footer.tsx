@@ -2,7 +2,7 @@ import { Instagram, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const instagramLink = "https://instagram.com/dra.helanacardoso";
+  const instagramLink = "https://instagram.com/dra.helianacardoso";
   const googleMapsLink = "https://maps.app.goo.gl/ivqyGNHWVvkS3q7L7";
 
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             {/* About */}
             <div>
-              <h3 className="text-xl font-serif font-bold mb-4">Dra. Helana Cardoso</h3>
+              <h3 className="text-xl font-serif font-bold mb-4">Dra. Heliana Cardoso</h3>
               <p className="text-primary-foreground/80 text-sm leading-relaxed">
                 Ginecologista e Obstetra especializada em procedimentos estéticos íntimos. 
                 CRM/PE 6079
@@ -57,7 +57,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
-                    @dra.helanacardoso
+                    @dra.helianacardoso
                   </a>
                 </li>
               </ul>
@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-primary-foreground/20">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
-              <p>© {currentYear} Dra. Helana Cardoso. Todos os direitos reservados.</p>
+              <p>© {currentYear} Dra. Heliana Cardoso. Todos os direitos reservados.</p>
               <p>CRM/PE 6079 | Ginecologia e Obstetrícia</p>
             </div>
           </div>

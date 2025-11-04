@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const whatsappLink = "https://wa.me/message/NPI4MNZIT1TP";
-  const instagramLink = "https://instagram.com/dra.helanacardoso";
+  const instagramLink = "https://instagram.com/dra.helianacardoso";
   const googleMapsLink = "https://maps.app.goo.gl/ivqyGNHWVvkS3q7L7";
 
   return (
@@ -21,9 +21,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
             {/* WhatsApp Card */}
-            <div className="bg-card p-8 rounded-3xl border border-border shadow-soft hover-lift animate-fade-in-up">
+            <div className="bg-card p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl border border-border shadow-soft hover-lift animate-fade-in-up">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="w-7 h-7 text-accent" />
@@ -44,7 +44,7 @@ const Contact = () => {
             </div>
 
             {/* Instagram Card */}
-            <div className="bg-card p-8 rounded-3xl border border-border shadow-soft hover-lift animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <div className="bg-card p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl border border-border shadow-soft hover-lift animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Instagram className="w-7 h-7 text-primary" />
@@ -52,7 +52,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-2xl font-semibold text-foreground mb-2">Instagram</h3>
                   <p className="text-muted-foreground">Siga para dicas de saúde íntima e novidades</p>
-                  <p className="text-sm text-primary font-medium mt-1">@dra.helanacardoso</p>
+                  <p className="text-sm text-primary font-medium mt-1">@dra.helianacardoso</p>
                 </div>
               </div>
               <Button
@@ -68,9 +68,9 @@ const Contact = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="grid md:grid-cols-3 gap-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {/* Location */}
-            <div className="bg-card p-6 rounded-2xl border border-border text-center">
+            <div className="bg-card p-4 sm:p-5 md:p-6 rounded-2xl border border-border text-center">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
@@ -85,7 +85,7 @@ const Contact = () => {
             </div>
 
             {/* CRM */}
-            <div className="bg-card p-6 rounded-2xl border border-border text-center">
+            <div className="bg-card p-4 sm:p-5 md:p-6 rounded-2xl border border-border text-center">
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
                 <div className="text-2xl font-bold text-accent">Dra</div>
               </div>
@@ -95,7 +95,7 @@ const Contact = () => {
             </div>
 
             {/* Hours */}
-            <div className="bg-card p-6 rounded-2xl border border-border text-center">
+            <div className="bg-card p-4 sm:p-5 md:p-6 rounded-2xl border border-border text-center">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-6 h-6 text-primary" />
               </div>

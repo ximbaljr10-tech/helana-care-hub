@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const InstagramSection = () => {
-  const instagramHandle = "@dra.helanacardoso";
-  const instagramUrl = "https://instagram.com/dra.helanacardoso";
+  const instagramHandle = "@dra.helianacardoso";
+  const instagramUrl = "https://instagram.com/dra.helianacardoso";
 
   return (
     <section className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
@@ -63,7 +63,7 @@ const InstagramSection = () => {
           </motion.div>
         </motion.div>
 
-        {/* Grid de Destaques do Instagram */}
+        {/* Grid de Destaques do Instagram - 3xN em todas as telas */}
         <motion.div 
           className="max-w-5xl mx-auto mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -71,71 +71,71 @@ const InstagramSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {/* Card de Destaque - Conteúdo Educativo */}
             <motion.div
-              className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 p-6 flex flex-col items-center justify-center text-center border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
+              className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <Instagram className="w-12 h-12 text-primary mb-3" />
-              <h4 className="font-bold text-foreground text-lg mb-2">Conteúdo Educativo</h4>
-              <p className="text-sm text-muted-foreground">Sobre saúde íntima</p>
+              <Instagram className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-primary mb-1 sm:mb-2 md:mb-3" />
+              <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-lg mb-0.5 sm:mb-1 md:mb-2">Conteúdo Educativo</h4>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Sobre saúde íntima</p>
             </motion.div>
 
             {/* Card de Destaque - Procedimentos */}
             <motion.div
-              className="aspect-square rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 p-6 flex flex-col items-center justify-center text-center border-2 border-accent/20 hover:border-accent/40 transition-all cursor-pointer"
+              className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center border-2 border-accent/20 hover:border-accent/40 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <span className="text-4xl mb-3">✨</span>
-              <h4 className="font-bold text-foreground text-lg mb-2">Procedimentos</h4>
-              <p className="text-sm text-muted-foreground">Antes e depois</p>
+              <span className="text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2 md:mb-3">✨</span>
+              <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-lg mb-0.5 sm:mb-1 md:mb-2">Procedimentos</h4>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Antes e depois</p>
             </motion.div>
 
             {/* Card de Destaque - Dicas */}
             <motion.div
-              className="aspect-square rounded-2xl bg-gradient-to-br from-primary/15 to-accent/15 p-6 flex flex-col items-center justify-center text-center border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
+              className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-primary/15 to-accent/15 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <span className="text-4xl mb-3">💡</span>
-              <h4 className="font-bold text-foreground text-lg mb-2">Dicas Exclusivas</h4>
-              <p className="text-sm text-muted-foreground">Bem-estar feminino</p>
+              <span className="text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2 md:mb-3">💡</span>
+              <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-lg mb-0.5 sm:mb-1 md:mb-2">Dicas Exclusivas</h4>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Bem-estar feminino</p>
             </motion.div>
 
             {/* Card de Destaque - Depoimentos */}
             <motion.div
-              className="aspect-square rounded-2xl bg-gradient-to-br from-accent/15 to-primary/15 p-6 flex flex-col items-center justify-center text-center border-2 border-accent/20 hover:border-accent/40 transition-all cursor-pointer"
+              className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/15 to-primary/15 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center border-2 border-accent/20 hover:border-accent/40 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <span className="text-4xl mb-3">💬</span>
-              <h4 className="font-bold text-foreground text-lg mb-2">Depoimentos</h4>
-              <p className="text-sm text-muted-foreground">Experiências reais</p>
+              <span className="text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2 md:mb-3">💬</span>
+              <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-lg mb-0.5 sm:mb-1 md:mb-2">Depoimentos</h4>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Experiências reais</p>
             </motion.div>
 
             {/* Card de Destaque - Novidades */}
             <motion.div
-              className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 p-6 flex flex-col items-center justify-center text-center border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
+              className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center border-2 border-primary/20 hover:border-primary/40 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <span className="text-4xl mb-3">🆕</span>
-              <h4 className="font-bold text-foreground text-lg mb-2">Novidades</h4>
-              <p className="text-sm text-muted-foreground">Lançamentos</p>
+              <span className="text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2 md:mb-3">🆕</span>
+              <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-lg mb-0.5 sm:mb-1 md:mb-2">Novidades</h4>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Lançamentos</p>
             </motion.div>
 
             {/* Card de Destaque - Lives */}
             <motion.div
-              className="aspect-square rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 p-6 flex flex-col items-center justify-center text-center border-2 border-accent/20 hover:border-accent/40 transition-all cursor-pointer"
+              className="aspect-square rounded-xl md:rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center text-center border-2 border-accent/20 hover:border-accent/40 transition-all cursor-pointer"
               whileHover={{ scale: 1.05 }}
               onClick={() => window.open(instagramUrl, "_blank")}
             >
-              <span className="text-4xl mb-3">📹</span>
-              <h4 className="font-bold text-foreground text-lg mb-2">Lives & Vídeos</h4>
-              <p className="text-sm text-muted-foreground">Tire suas dúvidas</p>
+              <span className="text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2 md:mb-3">📹</span>
+              <h4 className="font-bold text-foreground text-xs sm:text-sm md:text-lg mb-0.5 sm:mb-1 md:mb-2">Lives & Vídeos</h4>
+              <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Tire suas dúvidas</p>
             </motion.div>
           </div>
         </motion.div>
@@ -154,7 +154,7 @@ const InstagramSection = () => {
             className="w-full sm:w-auto bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:from-pink-600 hover:via-purple-600 hover:to-indigo-600 text-white text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 shadow-2xl font-bold rounded-2xl border-4 border-white/30 group"
           >
             <Instagram className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 group-hover:rotate-12 transition-transform" />
-            <span className="hidden sm:inline">Seguir @dra.helanacardoso</span>
+            <span className="hidden sm:inline">Seguir @dra.helianacardoso</span>
             <span className="sm:hidden">Seguir no Instagram</span>
             <ExternalLink className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
           </Button>

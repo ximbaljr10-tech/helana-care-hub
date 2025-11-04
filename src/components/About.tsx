@@ -126,7 +126,7 @@ const About = () => {
             <div className="flex items-center justify-center gap-4">
               <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
               <p className="text-center text-xl font-bold text-primary">
-                Dra. Helana Cardoso
+                Dra. Heliana Cardoso
               </p>
               <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
             </div>

@@ -37,7 +37,7 @@ const Navigation = () => {
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2">
             <div className="text-2xl font-serif font-bold text-primary">
-              Dra. Helana
+              Dra. Heliana
             </div>
           </a>
 
