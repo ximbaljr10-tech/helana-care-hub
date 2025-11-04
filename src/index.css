@@ -1,0 +1,360 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* PALETA BEIGE & BRANCO - Sofisticada e Limpa */
+    --background: 0 0% 100%;  /* Branco puro */
+    --foreground: 30 20% 25%;  /* Marrom escuro para texto */
+
+    --card: 40 40% 96%;  /* Beige muito claro */
+    --card-foreground: 30 20% 25%;
+
+    --popover: 40 40% 96%;
+    --popover-foreground: 30 20% 25%;
+
+    /* Primary: Beige médio/escuro para CTAs */
+    --primary: 35 35% 55%;  /* Beige médio-escuro */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Beige claro */
+    --secondary: 40 40% 88%;  /* Beige claro */
+    --secondary-foreground: 30 20% 30%;
+
+    --muted: 40 30% 92%;  /* Beige muito claro */
+    --muted-foreground: 30 15% 45%;
+
+    /* Accent: Beige escuro para destaques */
+    --accent: 30 30% 45%;  /* Beige escuro */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 25% 88%;  /* Beige claro para bordas */
+    --input: 40 30% 92%;
+    --ring: 35 35% 55%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Beige Palette - Tons de Beige do claro ao escuro */
+    --beige-50: 40 50% 98%;   /* Beige ultra claro (quase branco) */
+    --beige-100: 40 45% 95%;  /* Beige muito claro */
+    --beige-200: 40 40% 90%;  /* Beige claro */
+    --beige-300: 40 35% 82%;  /* Beige médio-claro */
+    --beige-400: 38 30% 70%;  /* Beige médio */
+    --beige-500: 35 30% 58%;  /* Beige médio-escuro */
+    --beige-600: 32 28% 48%;  /* Beige escuro */
+    --beige-700: 30 25% 38%;  /* Beige muito escuro */
+    --beige-800: 28 22% 28%;  /* Marrom-beige */
+    --beige-900: 25 20% 20%;  /* Marrom escuro */
+    
+    /* Gradients - Apenas Beige e Branco */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(40 40% 96%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(40 40% 96%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-accent: linear-gradient(120deg, hsl(35 35% 55%) 0%, hsl(30 30% 45%) 100%);
+    --gradient-light: linear-gradient(135deg, hsl(40 45% 95%) 0%, hsl(40 40% 90%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 50% 98%) 100%);
+    
+    /* Shadows - Suaves em tons de beige */
+    --shadow-soft: 0 4px 20px hsl(30 20% 25% / 0.06);
+    --shadow-medium: 0 8px 30px hsl(30 20% 25% / 0.10);
+    --shadow-elegant: 0 12px 40px hsl(35 35% 55% / 0.12);
+    
+    /* Modern Effects */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(250, 245, 240, 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 30 20% 25%;
+    --sidebar-primary: 35 35% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 40% 96%;
+    --sidebar-accent-foreground: 30 20% 25%;
+    --sidebar-border: 40 25% 88%;
+    --sidebar-ring: 35 35% 55%;
+  }
+
+  .dark {
+    /* Keeping light theme preference for medical aesthetic */
+    --background: 28 20% 12%;
+    --foreground: 30 35% 95%;
+
+    --card: 28 25% 15%;
+    --card-foreground: 30 35% 95%;
+
+    --popover: 28 25% 15%;
+    --popover-foreground: 30 35% 95%;
+
+    --primary: 180 30% 35%;
+    --primary-foreground: 30 35% 95%;
+
+    --secondary: 35 25% 25%;
+    --secondary-foreground: 30 35% 95%;
+
+    --muted: 28 20% 20%;
+    --muted-foreground: 32 15% 60%;
+
+    --accent: 42 75% 50%;
+    --accent-foreground: 28 20% 12%;
+
+    --destructive: 0 75% 45%;
+    --destructive-foreground: 30 35% 95%;
+
+    --border: 28 20% 25%;
+    --input: 28 20% 22%;
+    --ring: 180 30% 40%;
+
+    --glass-bg: rgba(0, 0, 0, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Custom utility classes */
+  .shadow-elegant {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
+  }
+
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.2);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Glassmorphism */
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Pulse animation for CTAs */
+  .pulse-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Hover scale effect */
+  .hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* ========================================
+     RESPONSIVIDADE MOBILE - PRIORITÁRIO
+     ======================================== */
+  
+  /* Mobile Small (320px - 479px) */
+  @media (max-width: 479px) {
+    /* Seções */
+    section {
+      padding: 40px 16px !important;
+    }
+    
+    /* Typography */
+    h1 {
+      font-size: 28px !important;
+      line-height: 1.2 !important;
+    }
+    
+    h2 {
+      font-size: 24px !important;
+      line-height: 1.3 !important;
+    }
+    
+    h3 {
+      font-size: 20px !important;
+      line-height: 1.3 !important;
+    }
+    
+    p {
+      font-size: 14px !important;
+      line-height: 1.5 !important;
+    }
+    
+    /* Botões Touch-Friendly */
+    button {
+      min-height: 48px !important;
+      font-size: 14px !important;
+      padding: 12px 16px !important;
+    }
+    
+    /* Cards */
+    .card,
+    [class*="rounded-"] {
+      border-radius: 12px !important;
+    }
+    
+    /* Container */
+    .container {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+  }
+  
+  /* Mobile Medium (480px - 767px) */
+  @media (max-width: 767px) {
+    /* Seções */
+    section {
+      padding: 48px 20px !important;
+    }
+    
+    /* Typography */
+    h1 {
+      font-size: 32px !important;
+      line-height: 1.2 !important;
+    }
+    
+    h2 {
+      font-size: 28px !important;
+      line-height: 1.3 !important;
+    }
+    
+    h3 {
+      font-size: 22px !important;
+    }
+    
+    p {
+      font-size: 15px !important;
+      line-height: 1.6 !important;
+    }
+    
+    /* Grids */
+    [class*="grid-cols-"] {
+      grid-template-columns: 1fr !important;
+    }
+    
+    /* Botões Touch-Friendly */
+    button {
+      min-height: 48px !important;
+      padding: 12px 20px !important;
+    }
+    
+    /* Imagens Responsivas */
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* Cards */
+    .card,
+    [class*="rounded-2xl"],
+    [class*="rounded-3xl"] {
+      border-radius: 16px !important;
+    }
+    
+    /* Espaçamento */
+    [class*="space-y-8"] > * + * {
+      margin-top: 24px !important;
+    }
+    
+    [class*="space-y-6"] > * + * {
+      margin-top: 16px !important;
+    }
+    
+    [class*="gap-8"] {
+      gap: 16px !important;
+    }
+    
+    [class*="gap-6"] {
+      gap: 12px !important;
+    }
+  }
+  
+  /* Tablet (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+      font-size: 42px !important;
+    }
+    
+    h2 {
+      font-size: 36px !important;
+    }
+    
+    h3 {
+      font-size: 28px !important;
+    }
+  }
+  
+  /* Prevenção de Scroll Horizontal e Overflow */
+  @media (max-width: 1024px) {
+    body {
+      overflow-x: hidden !important;
+    }
+    
+    body > * {
+      max-width: 100vw !important;
+    }
+    
+    .container {
+      max-width: 100% !important;
+    }
+    
+    /* Garantir que nada extrapole a viewport */
+    * {
+      box-sizing: border-box !important;
+    }
+  }
+}
