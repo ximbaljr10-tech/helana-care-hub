@@ -48,7 +48,7 @@ const SocialProof = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-[hsl(30,20%,25%)] mb-4">
-            Milhares de Mulheres <span className="text-[hsl(35,35%,55%)]">Confiam</span> em Nós
+            Milhares de Mulheres <span className="text-primary-dark">Confiam</span> em Nós
           </h2>
           <p className="text-lg text-[hsl(30,15%,45%)] max-w-2xl mx-auto">
             Resultados comprovados e aprovados por quem já viveu a transformação
@@ -118,7 +118,7 @@ const SocialProof = () => {
         >
           <div className="flex items-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-[hsl(35,35%,55%)] text-[hsl(35,35%,55%)]" />
+              <Star key={i} className="w-6 h-6 fill-primary-dark text-primary-dark" />
             ))}
           </div>
           <p className="text-lg md:text-xl text-[hsl(30,20%,25%)] italic mb-4">

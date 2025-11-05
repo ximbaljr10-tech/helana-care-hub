@@ -55,11 +55,11 @@ const FAQ = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-2 bg-white px-5 py-2 rounded-full mb-6 shadow-lg border border-[hsl(40,25%,88%)]">
-            <HelpCircle className="w-5 h-5 text-[hsl(35,35%,55%)]" />
+            <HelpCircle className="w-5 h-5 text-primary-dark" />
             <span className="font-bold text-[hsl(30,20%,25%)]">Dúvidas Frequentes</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-[hsl(30,20%,25%)] mb-6">
-            Perguntas <span className="text-[hsl(35,35%,55%)]">Frequentes</span>
+            Perguntas <span className="text-primary-dark">Frequentes</span>
           </h2>
           <p className="text-xl text-[hsl(30,15%,45%)] max-w-2xl mx-auto">
             Tire suas dúvidas sobre procedimentos, consultas e atendimento
@@ -81,7 +81,7 @@ const FAQ = () => {
                   value={`item-${index}`}
                   className="bg-white border border-[hsl(40,25%,88%)] rounded-2xl px-6 shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <AccordionTrigger className="text-left hover:text-[hsl(35,35%,55%)] transition-colors py-6">
+                  <AccordionTrigger className="text-left hover:text-primary-dark transition-colors py-6">
                     <span className="text-base md:text-lg font-semibold pr-4 text-[hsl(30,20%,25%)]">{faq.question}</span>
                   </AccordionTrigger>
                   <AccordionContent className="pb-6">

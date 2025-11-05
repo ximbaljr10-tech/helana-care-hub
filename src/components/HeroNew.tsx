@@ -47,7 +47,7 @@ const HeroNew = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Badge de Urgência - DESTAQUE MÁXIMO */}
+            {/* Badge Elegante - REFORÇO DE EXCLUSIVIDADE */}
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -59,10 +59,10 @@ const HeroNew = () => {
               }}
               className="inline-block"
             >
-              <div className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-full shadow-2xl border-2 border-white/20 animate-pulse-slow">
+              <div className="bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-full shadow-lg border border-white/30 shine-pass">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 animate-bounce" />
-                  <span className="font-bold text-lg">Apenas 3 vagas esta semana!</span>
+                  <Sparkles className="w-5 h-5" />
+                  <span className="font-semibold text-base">Atendimento Exclusivo e Personalizado</span>
                 </div>
               </div>
             </motion.div>

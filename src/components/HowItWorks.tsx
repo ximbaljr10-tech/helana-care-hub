@@ -36,7 +36,7 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-6xl font-bold text-[hsl(30,20%,25%)] mb-6">
-            Como <span className="text-[hsl(35,35%,55%)]">Funciona</span>
+            Como <span className="text-primary-dark">Funciona</span>
           </h2>
           <p className="text-xl text-[hsl(30,15%,45%)] max-w-2xl mx-auto">
             3 passos simples para começar sua transformação

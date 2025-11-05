@@ -189,7 +189,7 @@ const Hero = () => {
                     decimals={1}
                     duration={2}
                   />
-                  <Star className="w-5 h-5 fill-[hsl(35,35%,55%)] text-[hsl(35,35%,55%)] ml-1" />
+                  <Star className="w-5 h-5 fill-primary-dark text-primary-dark ml-1" />
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-semibold mt-1">Google</p>
               </div>

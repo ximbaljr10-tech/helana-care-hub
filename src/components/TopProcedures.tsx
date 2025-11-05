@@ -17,7 +17,7 @@ const TopProcedures = () => {
         "Recuperação tranquila",
         "Aumento da autoconfiança"
       ],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+      image: "/images/procedures/line-art-1.png",
       popular: true
     },
     {
@@ -30,7 +30,7 @@ const TopProcedures = () => {
         "Rápida aplicação",
         "Pele uniforme"
       ],
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+      image: "/images/procedures/line-art-2.png",
       popular: true
     },
     {
@@ -43,7 +43,7 @@ const TopProcedures = () => {
         "Efeito imediato",
         "Resultados duradouros"
       ],
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+      image: "/images/procedures/line-art-3.png",
       popular: true
     }
   ];
@@ -59,12 +59,12 @@ const TopProcedures = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-5 py-2 rounded-full mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-5 py-2 rounded-full mb-6 shadow-lg shine-pass">
             <Sparkles className="w-5 h-5" />
-            <span className="font-bold">Top 3 Procedimentos Mais Procurados</span>
+            <span className="font-bold">Procedimentos em Destaque</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-[hsl(30,20%,25%)] mb-6">
-            Escolha Sua <span className="text-[hsl(35,35%,55%)]">Transformação</span>
+            Escolha Sua <span className="text-primary-dark">Transformação</span>
           </h2>
           <p className="text-xl text-[hsl(30,15%,45%)] max-w-3xl mx-auto">
             Os procedimentos preferidos pelas nossas pacientes para recuperar autoestima e bem-estar íntimo
@@ -83,17 +83,17 @@ const TopProcedures = () => {
               transition={{ delay: index * 0.15, duration: 0.6 }}
             >
               {/* Imagem */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[hsl(43,32%,96%)] to-white">
                 <img 
                   src={procedure.image} 
                   alt={procedure.title}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain p-8 hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,30%,45%)]/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,30%,45%)]/10 to-transparent" />
                 {procedure.popular && (
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse-slow flex items-center gap-2">
-                    <Flame className="w-4 h-4" />
-                    Mais Procurado
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg shimmer-effect flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    Em Destaque
                   </div>
                 )}
                 <div className="absolute bottom-4 left-4 right-4">
