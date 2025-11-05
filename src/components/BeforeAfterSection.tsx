@@ -1,34 +1,37 @@
-
 import { motion } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 import { Sparkles } from "lucide-react";
+import beforeAfter1 from '@/assets/before-after-1.png';
+import beforeAfter2 from '@/assets/before-after-2.png';
+import beforeAfter3 from '@/assets/before-after-3.png';
+import beforeAfter4 from '@/assets/before-after-4.png';
 
 const BeforeAfterSection = () => {
   const transformations = [
     {
-      title: "Ninfoplastia",
-      beforeImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-      afterImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+      title: "Ninfoplastia - Caso 1",
+      image: beforeAfter1,
+      type: 'ninfoplastia' as const,
       description: "Harmonização dos pequenos lábios com resultado natural"
     },
     {
-      title: "Clareamento Íntimo",
-      beforeImage: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=800&q=80",
-      afterImage: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+      title: "Clareamento Íntimo - Caso 1",
+      image: beforeAfter2,
+      type: 'clareamento' as const,
       description: "Uniformização da tonalidade e autoestima renovada"
     },
     {
-      title: "Preenchimento Íntimo",
-      beforeImage: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=80",
-      afterImage: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-      description: "Rejuvenescimento e aumento da firmeza"
+      title: "Ninfoplastia - Caso 2",
+      image: beforeAfter3,
+      type: 'ninfoplastia' as const,
+      description: "Procedimento delicado com foco na naturalidade"
     },
     {
-      title: "Laser CO2 Fracionado",
-      beforeImage: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80",
-      afterImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-      description: "Rejuvenescimento íntimo e melhora da textura"
+      title: "Clareamento Íntimo - Caso 2",
+      image: beforeAfter4,
+      type: 'clareamento' as const,
+      description: "Resultados progressivos após 3 sessões"
     }
   ];
 
@@ -84,10 +87,8 @@ const BeforeAfterSection = () => {
 
                       {/* Before/After Slider */}
                       <BeforeAfterSlider
-                        beforeImage={transformation.beforeImage}
-                        afterImage={transformation.afterImage}
-                        beforeLabel="Antes"
-                        afterLabel="Depois"
+                        image={transformation.image}
+                        type={transformation.type}
                       />
 
                       {/* Badge de Resultado */}

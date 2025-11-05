@@ -35,10 +35,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2">
-            <div className="text-2xl font-serif font-bold text-primary">
-              Dra. Helana
-            </div>
+          <a href="#hero" className="flex items-center gap-3">
+            <img 
+              src={new URL('@/assets/logo-helana.png', import.meta.url).href} 
+              alt="Helana Cardoso - Farmacêutica Esteta" 
+              className="h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Menu */}

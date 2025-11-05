@@ -9,63 +9,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* PALETA BEIGE & BRANCO - Sofisticada e Limpa */
-    --background: 0 0% 100%;  /* Branco puro */
-    --foreground: 30 20% 25%;  /* Marrom escuro para texto */
+    /* NOVA PALETA - #D6B07A (bege) e #0F4443 (verde) */
+    --background: 43 32% 96%;  /* #f7f7eb off-white */
+    --foreground: 178 96% 13%;  /* #0F4443 verde escuro */
 
-    --card: 40 40% 96%;  /* Beige muito claro */
-    --card-foreground: 30 20% 25%;
+    --card: 0 0% 100%;  /* #ffffff branco */
+    --card-foreground: 178 96% 13%;
 
-    --popover: 40 40% 96%;
-    --popover-foreground: 30 20% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 178 96% 13%;
 
-    /* Primary: Beige médio/escuro para CTAs */
-    --primary: 35 35% 55%;  /* Beige médio-escuro */
+    /* Primary: #D6B07A bege dourado */
+    --primary: 38 54% 65%;  /* #D6B07A */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Beige claro */
-    --secondary: 40 40% 88%;  /* Beige claro */
-    --secondary-foreground: 30 20% 30%;
+    /* Secondary: #0F4443 verde */
+    --secondary: 178 96% 13%;  /* #0F4443 */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 30% 92%;  /* Beige muito claro */
-    --muted-foreground: 30 15% 45%;
+    --muted: 43 32% 90%;
+    --muted-foreground: 178 50% 25%;
 
-    /* Accent: Beige escuro para destaques */
-    --accent: 30 30% 45%;  /* Beige escuro */
-    --accent-foreground: 0 0% 100%;
+    /* Accent: bege */
+    --accent: 38 54% 65%;
+    --accent-foreground: 178 96% 13%;
 
-    --destructive: 0 70% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 25% 88%;  /* Beige claro para bordas */
-    --input: 40 30% 92%;
-    --ring: 35 35% 55%;
+    --border: 38 54% 85%;
+    --input: 38 54% 92%;
+    --ring: 38 54% 65%;
 
     --radius: 0.75rem;
     
-    /* Custom Beige Palette - Tons de Beige do claro ao escuro */
-    --beige-50: 40 50% 98%;   /* Beige ultra claro (quase branco) */
-    --beige-100: 40 45% 95%;  /* Beige muito claro */
-    --beige-200: 40 40% 90%;  /* Beige claro */
-    --beige-300: 40 35% 82%;  /* Beige médio-claro */
-    --beige-400: 38 30% 70%;  /* Beige médio */
-    --beige-500: 35 30% 58%;  /* Beige médio-escuro */
-    --beige-600: 32 28% 48%;  /* Beige escuro */
-    --beige-700: 30 25% 38%;  /* Beige muito escuro */
-    --beige-800: 28 22% 28%;  /* Marrom-beige */
-    --beige-900: 25 20% 20%;  /* Marrom escuro */
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(43 32% 96%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(43 32% 96%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-accent: linear-gradient(120deg, hsl(38 54% 65%) 0%, hsl(38 45% 55%) 100%);
+    --gradient-light: linear-gradient(135deg, hsl(43 32% 95%) 0%, hsl(0 0% 100%) 100%);
     
-    /* Gradients - Apenas Beige e Branco */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(40 40% 96%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(40 40% 96%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-accent: linear-gradient(120deg, hsl(35 35% 55%) 0%, hsl(30 30% 45%) 100%);
-    --gradient-light: linear-gradient(135deg, hsl(40 45% 95%) 0%, hsl(40 40% 90%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 50% 98%) 100%);
-    
-    /* Shadows - Suaves em tons de beige */
-    --shadow-soft: 0 4px 20px hsl(30 20% 25% / 0.06);
-    --shadow-medium: 0 8px 30px hsl(30 20% 25% / 0.10);
-    --shadow-elegant: 0 12px 40px hsl(35 35% 55% / 0.12);
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(178 96% 13% / 0.06);
+    --shadow-medium: 0 8px 30px hsl(178 96% 13% / 0.10);
+    --shadow-elegant: 0 12px 40px hsl(38 54% 65% / 0.15);
     
     /* Modern Effects */
     --glass-bg: rgba(255, 255, 255, 0.85);
@@ -76,56 +63,55 @@ All colors MUST be HSL.
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 30 20% 25%;
-    --sidebar-primary: 35 35% 55%;
+    --sidebar-foreground: 178 96% 13%;
+    --sidebar-primary: 38 54% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 40 40% 96%;
-    --sidebar-accent-foreground: 30 20% 25%;
-    --sidebar-border: 40 25% 88%;
-    --sidebar-ring: 35 35% 55%;
+    --sidebar-accent: 43 32% 96%;
+    --sidebar-accent-foreground: 178 96% 13%;
+    --sidebar-border: 38 54% 85%;
+    --sidebar-ring: 38 54% 65%;
   }
 
   .dark {
-    /* Keeping light theme preference for medical aesthetic */
-    --background: 28 20% 12%;
-    --foreground: 30 35% 95%;
+    --background: 178 96% 13%;
+    --foreground: 43 32% 96%;
 
-    --card: 28 25% 15%;
-    --card-foreground: 30 35% 95%;
+    --card: 178 80% 15%;
+    --card-foreground: 43 32% 96%;
 
-    --popover: 28 25% 15%;
-    --popover-foreground: 30 35% 95%;
+    --popover: 178 80% 15%;
+    --popover-foreground: 43 32% 96%;
 
-    --primary: 180 30% 35%;
-    --primary-foreground: 30 35% 95%;
+    --primary: 38 54% 65%;
+    --primary-foreground: 178 96% 13%;
 
-    --secondary: 35 25% 25%;
-    --secondary-foreground: 30 35% 95%;
+    --secondary: 178 50% 25%;
+    --secondary-foreground: 43 32% 96%;
 
-    --muted: 28 20% 20%;
-    --muted-foreground: 32 15% 60%;
+    --muted: 178 50% 20%;
+    --muted-foreground: 43 32% 75%;
 
-    --accent: 42 75% 50%;
-    --accent-foreground: 28 20% 12%;
+    --accent: 38 54% 65%;
+    --accent-foreground: 178 96% 13%;
 
-    --destructive: 0 75% 45%;
-    --destructive-foreground: 30 35% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 43 32% 96%;
 
-    --border: 28 20% 25%;
-    --input: 28 20% 22%;
-    --ring: 180 30% 40%;
+    --border: 178 50% 25%;
+    --input: 178 50% 25%;
+    --ring: 38 54% 65%;
 
-    --glass-bg: rgba(0, 0, 0, 0.5);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(15, 68, 67, 0.5);
+    --glass-border: rgba(214, 176, 122, 0.1);
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 178 96% 10%;
+    --sidebar-foreground: 43 32% 96%;
+    --sidebar-primary: 38 54% 65%;
+    --sidebar-primary-foreground: 178 96% 13%;
+    --sidebar-accent: 178 50% 15%;
+    --sidebar-accent-foreground: 43 32% 96%;
+    --sidebar-border: 178 50% 20%;
+    --sidebar-ring: 38 54% 65%;
   }
 }
 
