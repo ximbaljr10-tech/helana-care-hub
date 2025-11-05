@@ -7,7 +7,7 @@ const FinalCTA = () => {
   const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Quero%20agendar%20minha%20consulta%20ainda%20esta%20semana!";
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-[hsl(30,30%,45%)] via-[hsl(35,35%,55%)] to-[hsl(30,30%,45%)] relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-gradient-to-br from-primary via-accent to-primary relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
@@ -35,7 +35,7 @@ const FinalCTA = () => {
           {/* Título */}
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Pronta Para Sua <br />
-            <span className="text-[hsl(40,45%,95%)]">Transformação?</span>
+            <span className="text-background">Transformação?</span>
           </h2>
 
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
@@ -72,7 +72,7 @@ const FinalCTA = () => {
           >
             <Button 
               size="lg"
-              className="bg-white hover:bg-white/90 text-[hsl(30,30%,45%)] font-bold text-xl md:text-2xl px-12 py-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+              className="bg-white hover:bg-white/90 text-secondary font-bold text-xl md:text-2xl px-12 py-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
               onClick={() => window.open(whatsappLink, '_blank')}
             >
               <span className="flex items-center gap-3">

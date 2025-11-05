@@ -36,7 +36,7 @@ const BeforeAfterSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-[hsl(40,40%,96%)] to-white">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-card">
       <div className="container mx-auto px-4">
         {/* Título */}
         <motion.div
@@ -46,17 +46,17 @@ const BeforeAfterSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[hsl(30,30%,45%)] to-[hsl(35,35%,55%)] text-white px-5 py-2 rounded-full mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-5 py-2 rounded-full mb-6 shadow-lg">
             <Sparkles className="w-5 h-5" />
             <span className="font-bold">Resultados Reais</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[hsl(30,20%,25%)] mb-6">
-            Antes & Depois <span className="text-[hsl(35,35%,55%)]">Incríveis</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Antes & Depois <span className="text-primary">Incríveis</span>
           </h2>
-          <p className="text-xl text-[hsl(30,15%,45%)] max-w-3xl mx-auto mb-4">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
             Veja a transformação real de nossas pacientes
           </p>
-          <p className="text-base text-[hsl(35,35%,55%)] font-semibold">
+          <p className="text-base text-primary font-semibold">
             ← Arraste o slider para ver o antes e depois →
           </p>
         </motion.div>
@@ -74,13 +74,13 @@ const BeforeAfterSection = () => {
               {transformations.map((transformation, index) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1 pl-4">
                   <div className="p-4">
-                    <div className="bg-white rounded-3xl p-6 shadow-xl border border-[hsl(40,25%,88%)]">
+                    <div className="bg-card rounded-3xl p-6 shadow-xl border border-border">
                       {/* Título do Procedimento */}
                       <div className="text-center mb-6">
-                        <h3 className="text-2xl md:text-3xl font-bold text-[hsl(30,20%,25%)] mb-2">
+                        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                           {transformation.title}
                         </h3>
-                        <p className="text-[hsl(30,15%,45%)]">
+                        <p className="text-muted-foreground">
                           {transformation.description}
                         </p>
                       </div>
@@ -93,9 +93,9 @@ const BeforeAfterSection = () => {
 
                       {/* Badge de Resultado */}
                       <div className="mt-6 text-center">
-                        <div className="inline-flex items-center gap-2 bg-[hsl(40,40%,96%)] px-4 py-2 rounded-full">
-                          <Sparkles className="w-5 h-5 text-[hsl(35,35%,55%)]" />
-                          <span className="text-sm font-semibold text-[hsl(30,20%,25%)]">
+                        <div className="inline-flex items-center gap-2 bg-muted px-4 py-2 rounded-full">
+                          <Sparkles className="w-5 h-5 text-primary" />
+                          <span className="text-sm font-semibold text-foreground">
                             Resultado Natural e Duradouro
                           </span>
                         </div>
@@ -105,8 +105,8 @@ const BeforeAfterSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 bg-white hover:bg-[hsl(40,40%,96%)] border-[hsl(40,25%,88%)]" />
-            <CarouselNext className="right-2 bg-white hover:bg-[hsl(40,40%,96%)] border-[hsl(40,25%,88%)]" />
+            <CarouselPrevious className="left-2 bg-card hover:bg-muted border-border" />
+            <CarouselNext className="right-2 bg-card hover:bg-muted border-border" />
           </Carousel>
         </motion.div>
 
@@ -118,7 +118,7 @@ const BeforeAfterSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <p className="text-sm text-[hsl(30,15%,45%)] italic">
+          <p className="text-sm text-muted-foreground italic">
             * Imagens ilustrativas. Resultados podem variar de acordo com cada caso. Consulte a Dra. Helana para uma avaliação personalizada.
           </p>
         </motion.div>

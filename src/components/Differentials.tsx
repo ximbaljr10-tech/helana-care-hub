@@ -34,7 +34,7 @@ const Differentials = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[hsl(40,40%,96%)]">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-card">
       <div className="container mx-auto px-4">
         {/* Título */}
         <motion.div
@@ -44,10 +44,10 @@ const Differentials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-[hsl(30,20%,25%)] mb-6">
-            Por Que <span className="text-[hsl(35,35%,55%)]">Confiar</span> na Dra. Helana
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            Por Que <span className="text-primary">Confiar</span> na Dra. Helana
           </h2>
-          <p className="text-xl text-[hsl(30,15%,45%)] max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             4 pilares que garantem sua segurança e satisfação
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ const Differentials = () => {
           {differentials.map((item, index) => (
             <motion.div
               key={index}
-              className="group relative bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-[hsl(40,25%,88%)] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              className="group relative bg-card rounded-3xl p-8 md:p-10 shadow-xl border border-border hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -72,10 +72,10 @@ const Differentials = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl md:text-3xl font-bold text-[hsl(30,20%,25%)] mb-4 relative z-10">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 relative z-10">
                 {item.title}
               </h3>
-              <p className="text-[hsl(30,15%,45%)] leading-relaxed mb-6 relative z-10">
+              <p className="text-muted-foreground leading-relaxed mb-6 relative z-10">
                 {item.description}
               </p>
 
@@ -90,17 +90,17 @@ const Differentials = () => {
 
         {/* Complementary Message */}
         <motion.div
-          className="mt-16 text-center max-w-3xl mx-auto bg-gradient-to-br from-[hsl(35,35%,55%)]/10 to-[hsl(30,30%,45%)]/10 rounded-2xl p-8 border border-[hsl(40,25%,88%)]"
+          className="mt-16 text-center max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border border-border"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <p className="text-lg md:text-xl text-[hsl(30,20%,25%)] font-semibold flex items-start gap-3">
+          <p className="text-lg md:text-xl text-foreground font-semibold flex items-start gap-3">
             <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
             <span>"Meu compromisso é com sua saúde, bem-estar e autoestima. Cada procedimento é realizado com dedicação, técnica e muito carinho."</span>
           </p>
-          <p className="text-[hsl(30,15%,45%)] mt-4">— Dra. Helana Cardoso</p>
+          <p className="text-muted-foreground mt-4">— Dra. Helana Cardoso</p>
         </motion.div>
       </div>
     </section>
