@@ -1,0 +1,215 @@
+import { MapPin, Clock, Phone, Navigation, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const Location = () => {
+  const googleMapsLink = "https://maps.app.goo.gl/n2yzvkETuzYGRVQSA";
+  const whatsappLink = "https://wa.me/5561991049924?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Helana%20Cardoso";
+  
+  return (
+    <section id="localizacao" className="py-16 sm:py-24 md:py-32 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16 space-y-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-full border-2 border-primary/30">
+            <MapPin className="w-6 h-6 text-primary" />
+            <span className="text-lg font-bold text-primary">ONDE NOS ENCONTRAR</span>
+          </div>
+          
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground">
+            Localização e Contato
+          </h2>
+          
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+            Estamos em Águas Claras, Brasília-DF, prontos para cuidar da sua saúde íntima
+          </p>
+        </motion.div>
+
+        {/* Main Content Grid */}
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12">
+          {/* Google Maps Embed - GRANDE E DESTAQUE */}
+          <motion.div
+            className="relative h-[280px] sm:h-[350px] md:h-[450px] lg:h-[500px] rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl border-2 border-primary/20"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.046744744744!2d-48.0238!3d-15.8365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b9b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sAv.%20Pau%20Brasil%2C%2010%20-%20Sala%201912%20-%20%C3%81guas%20Claras%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1730000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização Dra. Helana Cardoso - Av. Pau Brasil, 10 - Sala 1912, Águas Claras, Brasília - DF"
+            />
+            
+            {/* Overlay Button */}
+            <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
+              <Button
+                size="sm"
+                className="w-full bg-white/95 hover:bg-white text-primary font-bold shadow-xl backdrop-blur-sm text-xs sm:text-sm md:text-base py-3 sm:py-4"
+                onClick={() => window.open(googleMapsLink, '_blank')}
+              >
+                <Navigation className="mr-1.5 sm:mr-2 w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                Abrir no Google Maps
+              </Button>
+            </div>
+          </motion.div>
+
+          {/* Contact Information Cards */}
+          <motion.div 
+            className="space-y-4 sm:space-y-6"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            {/* Address Card */}
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-2 border-primary/20 hover-lift">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 sm:mb-2">Endereço</h3>
+                  <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed font-semibold">
+                    Av. Pau Brasil, 10 - Sala 1912
+                  </p>
+                  <p className="text-xs sm:text-sm md:text-base text-muted-foreground mt-0.5 sm:mt-1">
+                    Águas Claras, Brasília - DF
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-0.5 sm:mt-1">
+                    CEP: 71926-000
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Hours Card */}
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border-2 border-accent/20 hover-lift">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2 sm:mb-3">Horário de Atendimento</h3>
+                  <div className="space-y-1.5 sm:space-y-2 text-sm sm:text-base md:text-lg">
+                    <p className="text-muted-foreground flex justify-between gap-2">
+                      <span className="font-semibold">Seg a Qui:</span>
+                      <span>9h - 18h</span>
+                    </p>
+                    <p className="text-muted-foreground flex justify-between gap-2">
+                      <span className="font-semibold">Sexta:</span>
+                      <span>9h - 17h</span>
+                    </p>
+                    <p className="text-muted-foreground flex justify-between gap-2">
+                      <span className="font-semibold">Sáb/Dom:</span>
+                      <span className="text-rose-500">Fechado</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* WhatsApp CTA Card */}
+            <motion.div 
+              className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl lg:rounded-3xl border-2 border-green-200"
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl md:rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-1 sm:mb-2">Entre em Contato</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-1 sm:mb-2">
+                    <Phone className="inline w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+                    (61) 99104-9924
+                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
+                    Agende sua consulta de forma rápida e prática pelo WhatsApp
+                  </p>
+                  <Button
+                    size="default"
+                    className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold shadow-lg text-sm sm:text-base md:text-lg py-2.5 sm:py-3 md:py-6"
+                    onClick={() => window.open(whatsappLink, '_blank')}
+                  >
+                    <MessageCircleIcon className="mr-1.5 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="hidden sm:inline">Falar no WhatsApp Agora</span>
+                    <span className="sm:hidden">WhatsApp</span>
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Info Cards */}
+        <motion.div 
+          className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl font-bold text-primary">🚗</span>
+            </div>
+            <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Estacionamento</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">Conveniado no local</p>
+          </div>
+
+          <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-2xl sm:text-3xl font-bold text-accent">♿</span>
+            </div>
+            <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Acessibilidade</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">Ambiente acessível</p>
+          </div>
+
+          <div className="bg-card p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border text-center hover-lift">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" />
+            </div>
+            <h4 className="font-bold text-foreground text-base sm:text-lg mb-1 sm:mb-2">Ambiente Moderno</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">Confortável e discreto</p>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+// Simple icon component
+const MessageCircleIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+  </svg>
+);
+
+export default Location;
